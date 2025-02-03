@@ -1,7 +1,20 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Planetary Playing Cards
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<div class="grid">
+    <div class="planetcard sun" data-sr>
+        <div class="planetavatar sun"></div>
+        <h2>Sun</h2>
+        <p>Type G2V</p>
+    </div>
+
+    {% for planet in collections.planets %}
+        <div class="planetcard" data-sr>
+            <div class="planetavatar {{ planet.data.title | downcase }}"></div>
+            <h2>{{ planet.data.title }}</h2>
+            <p>{{ planet.data.au }} AU</p>
+        </div>
+    {% endfor %}
+</div>

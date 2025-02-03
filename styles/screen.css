@@ -1,50 +1,63 @@
+:root {
+    --color-bg: #222;
+    --color-card: #444;
+    --color-sun: gold;
+    --color-mercury: gray;
+    --color-venus: orange;
+    --color-earth: blue;
+    --color-mars: red;
+    --color-jupiter: brown;
+    --color-saturn: khaki;
+    --color-uranus: lightblue;
+    --color-neptune: blue;
+    --planet-size: 80px;
+}
+
 body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
+    background-color: blue;
+    font-family: Arial, sans-serif;
     text-align: center;
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Makes the Sun larger */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+
+.planetcard {
+    background: var(--color-card);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-nav ul li {
-    list-style-type: none;
-    margin: 0;
+.planetcard:hover {
+    transform: scale(1.1);
 }
 
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
+.planetavatar {
+    width: var(--planet-size);
+    height: var(--planet-size);
+    border-radius: 50%;
+    margin: 0 auto 10px;
 }
 
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
-}
-
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-img.about {
-    opacity: 0.5;
-}
+/* Planet Colors */
+.sun { background-color: var(--color-sun); }
+.mercury { background-color: var(--color-mercury); }
+.venus { background-color: var(--color-venus); }
+.earth { background-color: var(--color-earth); }
+.mars { background-color: var(--color-mars); }
+.jupiter { background-color: var(--color-jupiter); }
+.saturn { background-color: var(--color-saturn); }
+.uranus { background-color: var(--color-uranus); }
+.neptune { background-color: var(--color-neptune); }

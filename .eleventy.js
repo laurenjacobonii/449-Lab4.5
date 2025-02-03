@@ -1,6 +1,16 @@
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("styles.css");
+  eleventyConfig.addPassthroughCopy("scroll-reveal.js");
 
-// The export statement makes these settings available to other files in 11ty
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("styles");
+  eleventyConfig.addCollection("planets", function(collectionApi) {
+      return collectionApi.getFilteredByTag("planets");
+  });
+
+  return {
+      dir: {
+          input: ".",
+          includes: "_includes",
+          output: "_site"
+      }
+  };
 };
