@@ -31,7 +31,7 @@ h1{
     font-size: var(--header-size);
 }
 
-.grid-container {
+.grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 250px;
@@ -48,7 +48,7 @@ h1{
     grid-row-end: 3;
 }
 
-.sun .planet-circle {
+.sun .planet-shape {
     width: var(--sun-size);
     height: var(--sun-size);
     background: radial-gradient(circle, #ffcc00, #ff6600);
@@ -69,56 +69,56 @@ h1{
     border: white 2px solid;
 }
 
-.planet-circle {
+.planet-shape {
     background: radial-gradient(circle, #888, #222);
     border-radius: 50%;
     margin: 20px auto auto auto;
 }
 
-.Mercury .planet-circle {
+.Mercury .planet-shape {
     background: radial-gradient(circle, #bbb, #444);
     width: var(---mercury-size);
     height: var(---mercury-size);
     margin-top: 40px;
 }
 
-.Venus .planet-circle {
+.Venus .planet-shape {
     background: radial-gradient(circle, #e6c399, #a66);
     width: var(---venus-size);
     height: var(---venus-size);
 }
 
-.Earth .planet-circle {
+.Earth .planet-shape {
     background: radial-gradient(circle, #3399ff, #0044cc);
     width: var(---earth-size);
     height: var(---earth-size);
 }
 
-.Mars .planet-circle {
+.Mars .planet-shape {
     background: radial-gradient(circle, #ff6633, #aa2200);
     width: var(---mars-size);
     height: var(---mars-size);
 }
 
-.Jupiter .planet-circle {
+.Jupiter .planet-shape {
     background: radial-gradient(circle, #f4c542, #aa5500);
     width: var(---jupiter-size);
     height: var(---jupiter-size);
 }
 
-.Saturn .planet-circle {
+.Saturn .planet-shape {
     background: radial-gradient(circle, #e1c699, #886644);
     width: var(---saturn-size);
     height: var(---saturn-size);
 }
 
-.Uranus .planet-circle {
+.Uranus .planet-shape {
     background: radial-gradient(circle, #66ccff, #3399cc);
     width: var(---uranus-size);
     height: var(---uranus-size);
 }
 
-.Neptune .planet-circle {
+.Neptune .planet-shape {
     background: radial-gradient(circle, #3366cc, #003366);
     width: var(---neptune-size);
     height: var(---neptune-size);

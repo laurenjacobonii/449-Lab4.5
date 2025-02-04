@@ -2,16 +2,16 @@
 layout: base.liquid
 ---
 
-<section class="grid-container">
+<section class="grid">
     <div class="planet-card sun">
-        <div class="planet-circle"></div>
+        <div class="planet-shape"></div>
         <h2>Sun</h2>
         <p>Type: G2V</p>
     </div>
 
     {% for planet in collections.planets %}
         <div class="planet-card {{planet.data.title}}">
-            <div class="planet-circle"></div>
+            <div class="planet-shape"></div>
             <h3>{{ planet.data.title }}</h3>
             <p>{{ planet.data.au_distance }} AU</p>
         </div>
