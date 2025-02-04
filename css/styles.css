@@ -1,4 +1,3 @@
-/* ========== Root Variables ========== */
 :root {
     --bg-dark: #111;
     --bg-light: #222;
@@ -6,11 +5,19 @@
     --card-bg: #333;
     --hover-bg: #b8b6b6;
     --hover-text: black;
-    --planet-size: 80px;
-    --sun-size: 180px;  /* Make the Sun larger */
+    --sun-size: 180px;  
+    ---jupiter-size: 90px;
+    ---saturn-size: 85px;
+    ---uranus-size: 75px;
+    ---neptune-size: 70px;
+    ---earth-size: 65px;
+    ---venus-size: 60px; 
+    ---mars-size: 55px;   
+    ---mercury-size: 50px;
+    --header-size: 80px
+
 }
 
-/* ========== Global Styles ========== */
 body {
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -20,20 +27,22 @@ body {
     padding: 0;
 }
 
-/* ========== Main Container ========== */
+h1{
+    font-size: var(--header-size);
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 200px;
-    gap: 1rem;
+    grid-auto-rows: 250px;
+    gap: 2rem;
     padding: 2rem;
-    width: 900px;
-    margin: auto;
+    width: 1200px;
+    margin: 20px auto auto auto;
 }
 
-/* ========== Sun Styling (Much Bigger) ========== */
 .sun {
-    grid-column-start: 1;  /* Make the Sun take up more space */
+    grid-column-start: 1; 
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -43,78 +52,74 @@ body {
     width: var(--sun-size);
     height: var(--sun-size);
     background: radial-gradient(circle, #ffcc00, #ff6600);
+    margin: 100px auto auto auto;
 }
 
-/* ========== Planet Cards ========== */
 .planet-card {
     background: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgb(140, 140, 140);
 }
 
 .planet-card:hover {
-    transform: scale(1.05);
     background: var(--hover-bg);
-    color: var(--hover-text)
+    color: var(--hover-text);
+    border: white 2px solid;
 }
 
-/* ========== Planet Circles (No Images) ========== */
 .planet-circle {
-    width: var(--planet-size);
-    height: var(--planet-size);
     background: radial-gradient(circle, #888, #222);
     border-radius: 50%;
-    margin: 0 auto 10px;
+    margin: 20px auto auto auto;
 }
 
-/* ========== Individual Planet Colors ========== */
 .Mercury .planet-circle {
     background: radial-gradient(circle, #bbb, #444);
+    width: var(---mercury-size);
+    height: var(---mercury-size);
+    margin-top: 40px;
 }
 
 .Venus .planet-circle {
     background: radial-gradient(circle, #e6c399, #a66);
+    width: var(---venus-size);
+    height: var(---venus-size);
 }
 
 .Earth .planet-circle {
     background: radial-gradient(circle, #3399ff, #0044cc);
+    width: var(---earth-size);
+    height: var(---earth-size);
 }
 
 .Mars .planet-circle {
     background: radial-gradient(circle, #ff6633, #aa2200);
+    width: var(---mars-size);
+    height: var(---mars-size);
 }
 
 .Jupiter .planet-circle {
     background: radial-gradient(circle, #f4c542, #aa5500);
+    width: var(---jupiter-size);
+    height: var(---jupiter-size);
 }
 
 .Saturn .planet-circle {
     background: radial-gradient(circle, #e1c699, #886644);
+    width: var(---saturn-size);
+    height: var(---saturn-size);
 }
 
 .Uranus .planet-circle {
     background: radial-gradient(circle, #66ccff, #3399cc);
+    width: var(---uranus-size);
+    height: var(---uranus-size);
 }
 
 .Neptune .planet-circle {
     background: radial-gradient(circle, #3366cc, #003366);
-}
-
-/* ========== Responsive Design ========== */
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-
-    .planet-circle {
-        width: 60px;
-        height: 60px;
-    }
-
-    .sun .planet-circle {
-        width: 120px;
-        height: 120px;
-    }
+    width: var(---neptune-size);
+    height: var(---neptune-size);
 }

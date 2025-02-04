@@ -1,9 +1,9 @@
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("css"); // Copy CSS directly
+    eleventyConfig.addPassthroughCopy("css");
 
     return {
         dir: {
-            input: ".", // Root directory (not src)
+            input: ".",
             output: "_site"
         }
     };

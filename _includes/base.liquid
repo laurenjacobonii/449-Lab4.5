@@ -14,9 +14,19 @@
         {{ content }}
     </main>
 
-    <script>
-        ScrollReveal().reveal('.planet-card', { delay: 200, distance: '50px', origin: 'bottom' });
-    </script>
+   <script>
+        document.querySelectorAll(".planet-card").forEach((el, index) => {
+            ScrollReveal().reveal('.planet-card', {
+                delay: 200,
+                distance: '50px',
+                origin: 'bottom',
+                duration: 800,
+                easing: 'ease-in-out',
+                interval: 150
+            });
+        });
+   </script>
+
 
 </body>
 </html>
