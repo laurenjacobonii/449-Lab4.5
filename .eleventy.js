@@ -1,16 +1,10 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("styles.css");
-  eleventyConfig.addPassthroughCopy("scroll-reveal.js");
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("css"); // Copy CSS directly
 
-  eleventyConfig.addCollection("planets", function(collectionApi) {
-      return collectionApi.getFilteredByTag("planets");
-  });
-
-  return {
-      dir: {
-          input: ".",
-          includes: "_includes",
-          output: "_site"
-      }
-  };
+    return {
+        dir: {
+            input: ".", // Root directory (not src)
+            output: "_site"
+        }
+    };
 };

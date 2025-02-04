@@ -1,20 +1,19 @@
 ---
-layout: layout.liquid
-title: Planetary Playing Cards
+layout: base.liquid
 ---
 
-<div class="grid">
-    <div class="planetcard sun" data-sr>
-        <div class="planetavatar sun"></div>
+<section class="grid-container">
+    <div class="planet-card sun">
+        <div class="planet-circle"></div>
         <h2>Sun</h2>
-        <p>Type G2V</p>
+        <p>Type: G2V</p>
     </div>
 
     {% for planet in collections.planets %}
-        <div class="planetcard" data-sr>
-            <div class="planetavatar {{ planet.data.title | downcase }}"></div>
-            <h2>{{ planet.data.title }}</h2>
-            <p>{{ planet.data.au }} AU</p>
+        <div class="planet-card {{planet.data.title}}">
+            <div class="planet-circle"></div>
+            <h3>{{ planet.data.title }}</h3>
+            <p>{{ planet.data.au_distance }} AU</p>
         </div>
     {% endfor %}
-</div>
+</section>

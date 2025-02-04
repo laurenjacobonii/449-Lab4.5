@@ -1,0 +1,120 @@
+/* ========== Root Variables ========== */
+:root {
+    --bg-dark: #111;
+    --bg-light: #222;
+    --text-light: #fff;
+    --card-bg: #333;
+    --hover-bg: #b8b6b6;
+    --hover-text: black;
+    --planet-size: 80px;
+    --sun-size: 180px;  /* Make the Sun larger */
+}
+
+/* ========== Global Styles ========== */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== Main Container ========== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    padding: 2rem;
+    width: 900px;
+    margin: auto;
+}
+
+/* ========== Sun Styling (Much Bigger) ========== */
+.sun {
+    grid-column-start: 1;  /* Make the Sun take up more space */
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.sun .planet-circle {
+    width: var(--sun-size);
+    height: var(--sun-size);
+    background: radial-gradient(circle, #ffcc00, #ff6600);
+}
+
+/* ========== Planet Cards ========== */
+.planet-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.planet-card:hover {
+    transform: scale(1.05);
+    background: var(--hover-bg);
+    color: var(--hover-text)
+}
+
+/* ========== Planet Circles (No Images) ========== */
+.planet-circle {
+    width: var(--planet-size);
+    height: var(--planet-size);
+    background: radial-gradient(circle, #888, #222);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+/* ========== Individual Planet Colors ========== */
+.Mercury .planet-circle {
+    background: radial-gradient(circle, #bbb, #444);
+}
+
+.Venus .planet-circle {
+    background: radial-gradient(circle, #e6c399, #a66);
+}
+
+.Earth .planet-circle {
+    background: radial-gradient(circle, #3399ff, #0044cc);
+}
+
+.Mars .planet-circle {
+    background: radial-gradient(circle, #ff6633, #aa2200);
+}
+
+.Jupiter .planet-circle {
+    background: radial-gradient(circle, #f4c542, #aa5500);
+}
+
+.Saturn .planet-circle {
+    background: radial-gradient(circle, #e1c699, #886644);
+}
+
+.Uranus .planet-circle {
+    background: radial-gradient(circle, #66ccff, #3399cc);
+}
+
+.Neptune .planet-circle {
+    background: radial-gradient(circle, #3366cc, #003366);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .planet-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sun .planet-circle {
+        width: 120px;
+        height: 120px;
+    }
+}
